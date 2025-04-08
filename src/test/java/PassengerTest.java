@@ -10,5 +10,23 @@ public class PassengerTest {
         assertEquals("Alex", passenger.getFirstName());
         assertEquals("Murphy", passenger.getLastName());
         assertEquals(30, passenger.getAge());
+        assertEquals("123456", passenger.getId());
+    }
+
+    @Test
+    public void testSetters() {
+        Passenger passenger = new Passenger("Ms", "Amy", "Johnson", 25, "111222");
+
+        passenger.setTitle("Mr");
+        passenger.setFirstName("Charlie");
+        passenger.setLastName("Brown");
+        passenger.setAge(40);
+        passenger.setId("999999");
+
+        assert Equals("Mr", passenger.getTitle());
+        assert Equals("Charlie", passenger.getFirstName());
+        assert Equals("Brown", passenger.getLastName());
+        assert Equals(40, passenger.getAge());
+        assert Equals("111222", passenger.getId());
     }
 }
